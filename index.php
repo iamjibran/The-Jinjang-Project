@@ -241,6 +241,7 @@ if(isset($_SESSION['loginError'])) {
 <<<<<<< HEAD
 =======
 <!-- iCheck -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js"></script>
 
 >>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
 =======
