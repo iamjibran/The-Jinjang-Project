@@ -4,6 +4,7 @@
 session_start();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 if(empty($_SESSION['id_user'])) {
   header("Location: ../index.php");
   exit();
@@ -34,6 +35,11 @@ if($result->num_rows > 0)
 //Including Database Connection From db.php file to avoid rewriting in all files
 require_once("db.php");
 >>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
+=======
+
+//Including Database Connection From db.php file to avoid rewriting in all files
+require_once("db.php");
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
 ?>
 <!DOCTYPE html>
 <html>
@@ -41,7 +47,11 @@ require_once("db.php");
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <<<<<<< HEAD
+<<<<<<< HEAD
   <title>Job Portal</title>
+=======
+  <title>Jinjang</title>
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
 =======
   <title>Jinjang</title>
 >>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
@@ -55,15 +65,21 @@ require_once("db.php");
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
 <<<<<<< HEAD
+<<<<<<< HEAD
   <link rel="stylesheet" href="../css/AdminLTE.min.css">
   <link rel="stylesheet" href="../css/_all-skins.min.css">
   <!-- Custom -->
   <link rel="stylesheet" href="../css/custom.css">
 =======
+=======
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
   <link rel="stylesheet" href="css/AdminLTE.min.css">
   <link rel="stylesheet" href="css/_all-skins.min.css">
   <!-- Custom -->
   <link rel="stylesheet" href="css/custom.css">
+<<<<<<< HEAD
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
+=======
 >>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -87,9 +103,13 @@ require_once("db.php");
       <span class="logo-mini"><b>J</b>P</span>
       <!-- logo for regular state and mobile devices -->
 <<<<<<< HEAD
+<<<<<<< HEAD
       
 <span class="logo-lg"><b><?php echo $app_name;?></span>
     </a>
+=======
+<span class="logo-lg"><b><?php echo $app_name;?></span>    </a>
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
 =======
 <span class="logo-lg"><b><?php echo $app_name;?></span>    </a>
 >>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
@@ -101,14 +121,20 @@ require_once("db.php");
         <ul class="nav navbar-nav">
           <li>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <a href="../jobs.php">Jobs</a>
           </li>         
 =======
+=======
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
             <a href="login.php">Login</a>
           </li>
           <li>
             <a href="sign-up.php">Sign Up</a>
           </li>          
+<<<<<<< HEAD
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
+=======
 >>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
         </ul>
       </div>
@@ -116,10 +142,13 @@ require_once("db.php");
   </header>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper" style="margin-left: 0px;">
 
 =======
+=======
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
 
 
   <div class="content-wrapper" style="margin-left: 0px;">
@@ -134,6 +163,9 @@ require_once("db.php");
       {
   ?>
 
+<<<<<<< HEAD
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
+=======
 >>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
     <section id="candidates" class="content-header">
       <div class="container">
@@ -144,7 +176,11 @@ require_once("db.php");
             </div>
             <div class="pull-right">
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="index.php" class="btn btn-default btn-lg btn-flat margin-top-20"><i class="fa fa-arrow-circle-left"></i> Back</a>
+=======
+              <a href="jobs.php" class="btn btn-default btn-lg btn-flat margin-top-20"><i class="fa fa-arrow-circle-left"></i> Back</a>
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
 =======
               <a href="jobs.php" class="btn btn-default btn-lg btn-flat margin-top-20"><i class="fa fa-arrow-circle-left"></i> Back</a>
 >>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
@@ -158,13 +194,19 @@ require_once("db.php");
               <?php echo stripcslashes($row['description']); ?>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
             <?php 
             if(isset($_SESSION["id_user"]) && empty($_SESSION['companyLogged'])) { ?>
             <div>
               <a href="apply.php?id=<?php echo $row['id_jobpost']; ?>" class="btn btn-success btn-flat margin-top-50">Apply</a>
             </div>
             <?php } ?>
+<<<<<<< HEAD
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
+=======
 >>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
             
             
@@ -172,7 +214,11 @@ require_once("db.php");
           <div class="col-md-3">
             <div class="thumbnail">
 <<<<<<< HEAD
+<<<<<<< HEAD
               <img src="../uploads/logo/<?php echo $row['logo']; ?>" alt="companylogo">
+=======
+              <img src="uploads/logo/<?php echo $row['logo']; ?>" alt="companylogo">
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
 =======
               <img src="uploads/logo/<?php echo $row['logo']; ?>" alt="companylogo">
 >>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
@@ -188,12 +234,18 @@ require_once("db.php");
     </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
     <?php 
       }
     }
     ?>
 
+<<<<<<< HEAD
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
+=======
 >>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
     
 
@@ -203,7 +255,11 @@ require_once("db.php");
   <footer class="main-footer" style="margin-left: 0px;">
     <div class="text-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <strong>Copyright &copy; 2014-2018 <a href=""><?php echo $app_name;?></a>.</strong> All rights
+=======
+<strong>Copyright &copy; 2014-2018 <a href=""><?php echo $app_name;?></a>.</strong> All rights
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
 =======
 <strong>Copyright &copy; 2014-2018 <a href=""><?php echo $app_name;?></a>.</strong> All rights
 >>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
@@ -225,12 +281,18 @@ require_once("db.php");
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 <script src="../js/adminlte.min.js"></script>
 =======
+=======
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
 <script src="js/adminlte.min.js"></script>
 
 
 
+<<<<<<< HEAD
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
+=======
 >>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
 </body>
 </html>

@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //To Handle Session Variables on This Page
 session_start();
 
@@ -12,6 +13,8 @@ if(empty($_SESSION['id_user'])) {
 
 require_once("../db.php");
 =======
+=======
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
 session_start();
 
 if(isset($_SESSION['id_admin'])) {
@@ -19,6 +22,9 @@ if(isset($_SESSION['id_admin'])) {
   exit();
 }
 
+<<<<<<< HEAD
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
+=======
 >>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
 ?>
 <!DOCTYPE html>
@@ -38,9 +44,15 @@ if(isset($_SESSION['id_admin'])) {
   <!-- Theme style -->
   <link rel="stylesheet" href="../css/AdminLTE.min.css">
 <<<<<<< HEAD
+<<<<<<< HEAD
   <link rel="stylesheet" href="../css/_all-skins.min.css">
   <!-- Custom -->
   <link rel="stylesheet" href="../css/custom.css">
+=======
+  <!-- iCheck -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/blue.css">
+
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
 =======
   <!-- iCheck -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/blue.css">
@@ -54,6 +66,7 @@ if(isset($_SESSION['id_admin'])) {
   <![endif]-->
 
   <!-- Google Font -->
+<<<<<<< HEAD
 <<<<<<< HEAD
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -167,6 +180,8 @@ if(isset($_SESSION['id_admin'])) {
 </div>
 <!-- ./wrapper -->
 =======
+=======
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition login-page">
@@ -211,6 +226,9 @@ if(isset($_SESSION['loginError'])) {
 </div>
 <!-- /.login-box -->
 
+<<<<<<< HEAD
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
+=======
 >>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
 
 <!-- jQuery 3 -->
@@ -220,6 +238,11 @@ if(isset($_SESSION['loginError'])) {
 <!-- AdminLTE App -->
 <script src="../js/adminlte.min.js"></script>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<!-- iCheck -->
+
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
 =======
 <!-- iCheck -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js"></script>
