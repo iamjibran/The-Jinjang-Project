@@ -1,15 +1,41 @@
 <?php
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 39fb0d711f2b404afafe1a4a325e5362539bb248
 //To Handle Session Variables on This Page
 session_start();
 
 //If user Not logged in then redirect them back to homepage. 
+<<<<<<< HEAD
 if(empty($_SESSION['id_company'])) {
+=======
+if(empty($_SESSION['id_user'])) {
+>>>>>>> 39fb0d711f2b404afafe1a4a325e5362539bb248
   header("Location: ../index.php");
   exit();
 }
 
 require_once("../db.php");
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
+session_start();
+
+if(isset($_SESSION['id_admin'])) {
+  header("Location: dashboard.php");
+  exit();
+}
+
+<<<<<<< HEAD
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
+=======
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
+>>>>>>> 39fb0d711f2b404afafe1a4a325e5362539bb248
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,9 +53,27 @@ require_once("../db.php");
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../css/AdminLTE.min.css">
+<<<<<<< HEAD
   <link rel="stylesheet" href="../css/_all-skins.min.css">
   <!-- Custom -->
   <link rel="stylesheet" href="../css/custom.css">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <link rel="stylesheet" href="../css/_all-skins.min.css">
+  <!-- Custom -->
+  <link rel="stylesheet" href="../css/custom.css">
+=======
+  <!-- iCheck -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/blue.css">
+
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
+=======
+  <!-- iCheck -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/blue.css">
+
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
+>>>>>>> 39fb0d711f2b404afafe1a4a325e5362539bb248
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -38,6 +82,11 @@ require_once("../db.php");
   <![endif]-->
 
   <!-- Google Font -->
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 39fb0d711f2b404afafe1a4a325e5362539bb248
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
@@ -59,7 +108,13 @@ require_once("../db.php");
       <!-- Navbar Right Menu -->
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
+<<<<<<< HEAD
                   
+=======
+          <li>
+            <a href="../jobs.php">Jobs</a>
+          </li>          
+>>>>>>> 39fb0d711f2b404afafe1a4a325e5362539bb248
         </ul>
       </div>
     </nav>
@@ -77,6 +132,7 @@ require_once("../db.php");
                 <h3 class="box-title">Welcome <b><?php echo $_SESSION['name']; ?></b></h3>
               </div>
               <div class="box-body no-padding">
+<<<<<<< HEAD
                 <ul class="nav nav-pills nav-stacked">
                   <li class="active"><a href="index.php"><i class="fa fa-dashboard"></i> Dashboard</a></li>
                   <li><a href="edit-company.php"><i class="fa fa-tv"></i> My Company</a></li>
@@ -86,12 +142,21 @@ require_once("../db.php");
                   <!--<li><a href="mailbox.php"><i class="fa fa-envelope"></i> Mailbox</a></li>-->
                   <li><a href="settings.php"><i class="fa fa-gear"></i> Settings</a></li>
                   <li><a href="resume-database.php"><i class="fa fa-user"></i> Resume Database</a></li>
+=======
+               <ul class="nav nav-pills nav-stacked">
+                  <li><a href="edit-profile.php"><i class="fa fa-user"></i> Edit Profile</a></li>
+                  <li class="active"><a href="index.php"><i class="fa fa-address-card-o"></i> My Applications</a></li>
+                  <li><a href="../jobs.php"><i class="fa fa-list-ul"></i> Jobs</a></li>
+                  <!--<li><a href="mailbox.php"><i class="fa fa-envelope"></i> Mailbox</a></li>-->
+                  <li><a href="settings.php"><i class="fa fa-gear"></i> Settings</a></li>
+>>>>>>> 39fb0d711f2b404afafe1a4a325e5362539bb248
                   <li><a href="../logout.php"><i class="fa fa-arrow-circle-o-right"></i> Logout</a></li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="col-md-9 bg-white padding-2">
+<<<<<<< HEAD
 
             <h3>Overview</h3>
             <div class="alert alert-info alert-dismissible">
@@ -141,6 +206,42 @@ require_once("../db.php");
               </div>
             </div>
 
+=======
+            <h2><i>Recent Applications</i></h2>
+            <p>Below you will find job roles you have applied for</p>
+
+            <?php
+             $sql = "SELECT * FROM job_post INNER JOIN apply_job_post ON job_post.id_jobpost=apply_job_post.id_jobpost WHERE apply_job_post.id_user='$_SESSION[id_user]'";
+                  $result = $conn->query($sql);
+
+                  if($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()) 
+                    {     
+            ?>
+            <div class="attachment-block clearfix padding-2">
+                <h4 class="attachment-heading"><a href="view-job-post.php?id=<?php echo $row['id_jobpost']; ?>"><?php echo $row['jobtitle']; ?></a></h4>
+                <div class="attachment-text padding-2">
+                  <div class="pull-left"><i class="fa fa-calendar"></i> <?php echo $row['createdat']; ?></div>  
+                  <?php 
+
+                  if($row['status'] == 0) {
+                    echo '<div class="pull-right"><strong class="text-orange">Pending</strong></div>';
+                  } else if ($row['status'] == 1) {
+                    echo '<div class="pull-right"><strong class="text-red">Rejected</strong></div>';
+                  } else if ($row['status'] == 2) {
+                    echo '<div class="pull-right"><strong class="text-green">Accepted</strong></div> ';
+                  }
+                  ?>
+                                
+                </div>
+            </div>
+
+            <?php
+              }
+            }
+            ?>
+            
+>>>>>>> 39fb0d711f2b404afafe1a4a325e5362539bb248
           </div>
         </div>
       </div>
@@ -158,10 +259,71 @@ require_once("../db.php");
     </div>
   </footer>
 
+<<<<<<< HEAD
 
 
 </div>
 <!-- ./wrapper -->
+=======
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+
+</div>
+<!-- ./wrapper -->
+=======
+=======
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition login-page">
+<div class="login-box">
+  <div class="login-logo">
+    <a href="../index.php"><b>Jinjang</b></a>
+  </div>
+  <!-- /.login-logo -->
+  <div class="login-box-body">
+    <p class="login-box-msg">Admin Login</p>
+
+    <form action="checklogin.php" method="post">
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" name="username" placeholder="Username">
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" class="form-control" name="password" placeholder="Password">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+      </div>
+      <div class="row">
+        <!-- /.col -->
+        <div class="col-xs-4">
+          <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+        </div>
+        <!-- /.col -->
+      </div>
+      <?php 
+//If User Failed To log in then show error message.
+if(isset($_SESSION['loginError'])) {
+  ?>
+  <div>
+    <p class="text-center">Invalid Email/Password! Try Again!</p>
+  </div>
+<?php
+ unset($_SESSION['loginError']); }
+?>
+
+    </form>
+  </div>
+  <!-- /.login-box-body -->
+</div>
+<!-- /.login-box -->
+
+<<<<<<< HEAD
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
+=======
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
+>>>>>>> 39fb0d711f2b404afafe1a4a325e5362539bb248
 
 <!-- jQuery 3 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -169,5 +331,20 @@ require_once("../db.php");
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../js/adminlte.min.js"></script>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<!-- iCheck -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js"></script>
+
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
+=======
+<!-- iCheck -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js"></script>
+
+>>>>>>> 78374467415fbdbfa4897cb31d69425b25aa4007
+>>>>>>> 39fb0d711f2b404afafe1a4a325e5362539bb248
 </body>
 </html>
